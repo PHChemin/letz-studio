@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — customize per client in docs/UI_GUIDANCE.md
+ * Avoid default AI looks: purple gradients, cream+serif terracotta, Inter/Roboto.
+ */
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+
+  --color-ink: #1a1f1c;
+  --color-ink-muted: #4a5550;
+  --color-paper: #f3f0e8;
+  --color-paper-deep: #e4dfd2;
+  --color-accent: #0f6b5c;
+  --color-accent-hover: #0c574b;
+  --color-surface: #ffffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .section-pad {
+    @apply px-6 py-16 md:px-10 md:py-24;
+  }
+}
