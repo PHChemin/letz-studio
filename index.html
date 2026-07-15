@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nome do profissional ou loja — serviços, portfólio e contato."
+    />
+    <title>Nome do Cliente — Landing</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-3 focus:py-2 focus:text-white"
+    >
+      Ir para o conteúdo
+    </a>
+
+    <header class="absolute inset-x-0 top-0 z-20">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5 md:px-10">
+        <a href="/" class="font-display text-xl text-paper md:text-2xl">
+          Nome do Cliente
+        </a>
+
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 rounded-md border border-paper/40 px-3 py-2 text-sm text-paper md:hidden"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="nav-panel"
+        >
+          Menu
+        </button>
+
+        <nav
+          id="nav-panel"
+          data-nav-panel
+          data-open="false"
+          class="absolute left-0 right-0 top-full mx-6 hidden flex-col gap-4 rounded-lg bg-ink/95 p-4 text-paper shadow-lg data-[open=true]:flex md:static md:mx-0 md:flex md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0 md:shadow-none"
+        >
+          <a href="#servicos" class="text-sm font-medium hover:underline">Serviços</a>
+          <a href="#sobre" class="text-sm font-medium hover:underline">Sobre</a>
+          <a href="#contato" class="text-sm font-medium hover:underline">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- Hero: brand + one headline + one support line + one CTA + full-bleed visual -->
+      <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
+        <div
+          class="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,#2a5a52_0%,transparent_50%),radial-gradient(ellipse_at_80%_60%,#1f3d36_0%,#1a1f1c_60%)]"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="absolute inset-0 opacity-30"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+          "
+          aria-hidden="true"
+        ></div>
+        <div class="absolute inset-0 bg-ink/55" aria-hidden="true"></div>
+
+        <div class="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col justify-end px-6 pb-16 pt-28 md:px-10 md:pb-24">
+          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-paper/80">
+            Nome do Cliente
+          </p>
+          <h1 class="max-w-2xl text-4xl leading-tight md:text-6xl">
+            Uma frase curta sobre o que você oferece
+          </h1>
+          <p class="mt-4 max-w-lg text-base text-paper/85 md:text-lg">
+            Apoio em uma ou duas linhas. Troque pelo diferencial do cliente.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#contato"
+              class="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-hover"
+            >
+              Falar no WhatsApp
+            </a>
+            <a
+              href="#servicos"
+              class="rounded-md border border-paper/40 px-5 py-3 text-sm font-semibold text-paper transition hover:bg-paper/10"
+            >
+              Ver serviços
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="section-pad mx-auto max-w-5xl">
+        <h2 class="text-3xl md:text-4xl">Serviços</h2>
+        <p class="mt-3 max-w-2xl text-ink-muted">
+          Liste 3 ofertas principais. Cada bloco = um serviço, sem cards decorativos.
+        </p>
+
+        <ul class="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+          <li>
+            <h3 class="text-xl">Serviço um</h3>
+            <p class="mt-2 text-ink-muted">
+              Descrição objetiva do resultado para o cliente.
+            </p>
+          </li>
+          <li>
+            <h3 class="text-xl">Serviço dois</h3>
+            <p class="mt-2 text-ink-muted">
+              Descrição objetiva do resultado para o cliente.
+            </p>
+          </li>
+          <li>
+            <h3 class="text-xl">Serviço três</h3>
+            <p class="mt-2 text-ink-muted">
+              Descrição objetiva do resultado para o cliente.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="sobre" class="border-y border-paper-deep bg-paper-deep/40 section-pad">
+        <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl">Sobre</h2>
+            <p class="mt-4 text-ink-muted leading-relaxed">
+              Breve história ou posicionamento. Quem é, para quem atende, o que
+              torna o trabalho único. Sem parágrafo longo demais.
+            </p>
+          </div>
+          <div
+            class="aspect-[4/3] overflow-hidden rounded-sm bg-ink/10"
+            role="img"
+            aria-label="Espaço para foto do profissional ou ambiente"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+              alt="Ambiente de trabalho — substitua pela foto do cliente"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section-pad mx-auto max-w-5xl">
+        <h2 class="text-3xl md:text-4xl">Contato</h2>
+        <p class="mt-3 max-w-xl text-ink-muted">
+          Preferência: WhatsApp. Sem formulário de servidor — o Pages é estático.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <a
+            href="https://wa.me/5500000000000"
+            class="inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-hover"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="mailto:contato@exemplo.com"
+            class="inline-flex items-center justify-center rounded-md border border-ink/20 px-5 py-3 text-sm font-semibold transition hover:bg-paper-deep"
+          >
+            E-mail
+          </a>
+          <a
+            href="https://instagram.com/"
+            class="inline-flex items-center justify-center rounded-md border border-ink/20 px-5 py-3 text-sm font-semibold transition hover:bg-paper-deep"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-paper-deep px-6 py-8 text-sm text-ink-muted md:px-10">
+      <div class="mx-auto flex max-w-5xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          <span class="font-display text-ink">Nome do Cliente</span>
+          · <span data-year>2026</span>
+        </p>
+        <p>Landing entregue com Letz Studio</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

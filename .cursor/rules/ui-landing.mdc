@@ -1,0 +1,14 @@
+---
+description: Orientações de UI ao editar HTML/CSS da landing
+globs: index.html,src/**/*.{css,js,html}
+alwaysApply: false
+---
+
+# UI da landing
+
+- Manter hierarquia: hero → serviços → sobre → contato.
+- Alterar identidade visual pelos tokens `@theme` em `src/styles/main.css`.
+- Preferir tipografia + whitespace a cards/sombras/pills.
+- Imagens: realistas do ofício do cliente; placeholders Unsplash só até o cliente enviar fotos.
+- CTAs principais apontam para `#contato` ou WhatsApp direto.
+- Testar mentalmente mobile: menu `data-nav-*`, CTAs com área de toque boa.
