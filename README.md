@@ -1,6 +1,9 @@
 # Letz Studio
 
-Esqueleto para landings freelance (portfolio / loja / serviços), com hospedagem **gratuita** via **GitHub Pages** e estilos com **Vite + Tailwind CSS**.
+Landing do **Letz Studio** (design para social media) — Vite + Tailwind CSS, hospedagem gratuita via **GitHub Pages**.
+
+- Site: [www.letzdesignstudio.com.br](https://www.letzdesignstudio.com.br) (após DNS)
+- Instagram: [@letz_studio](https://www.instagram.com/letz_studio/)
 
 ## O que é o Vite?
 

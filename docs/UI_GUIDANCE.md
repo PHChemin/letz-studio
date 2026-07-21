@@ -2,6 +2,23 @@
 
 Diretrizes visuais para landings deste esqueleto. Leia junto com o `PRD.md` do cliente.
 
+## Identidade Letz Studio (aplicada)
+
+Fonte bruta: `public/identidade-visual/` · Assets web: `public/images/`
+
+| Token | Valor |
+| --- | --- |
+| Display | Bagelow Display |
+| Corpo | Outfit |
+| Script / acento | Caveat |
+| Fundo (tema claro) | `#ffffff` / `#fff0f5` |
+| Texto (ink) | `#181818` |
+| Accent (primária) | `#fc549c` |
+| Blush | `#fc78b4` |
+| Clima | Claro — rosa + charcoal, scrapbook / sticker |
+
+Slots `#servico-1..3` e `#produto-1..3` aguardam conteúdo do cliente.
+
 ## Princípios (sempre)
 
 1. **Uma composição no primeiro viewport** — marca + 1 headline + 1 frase + 1 grupo de CTA + visual dominante. Nada de dashboard.

@@ -1,5 +1,9 @@
 # Deploy — GitHub Pages e domínio
 
+**Cliente:** Letz Studio · domínio `www.letzdesignstudio.com.br`  
+**Repo:** `PHChemin/letz-studio` · Pages user: `PHChemin.github.io`  
+**CNAME no build:** `public/CNAME` (copiado para `dist/` no deploy)
+
 ## 1. Ativar Pages com Actions (uma vez por repo)
 
 1. No GitHub: **Settings → Pages**
@@ -7,30 +11,30 @@
 3. Faça push na `main` (ou rode o workflow manualmente em **Actions**)
 4. O workflow `.github/workflows/deploy.yml` faz: `npm ci` → `npm run build` → publica `dist/`
 
-Site padrão: `https://SEU_USER.github.io/NOME_DO_REPO/`
+Site padrão (enquanto o DNS não propaga): `https://phchemin.github.io/letz-studio/`
 
-> Se a URL for *project page* (`/NOME_DO_REPO/`) e os CSS/JS quebrarem, descomente `VITE_BASE_PATH` no workflow com o nome do repo. Com domínio custom e `base: './'`, em geral não precisa.
+> Se a URL for *project page* (`/letz-studio/`) e os CSS/JS quebrarem **sem** domínio custom, descomente `VITE_BASE_PATH: /letz-studio/` no workflow. Com domínio custom e `base: './'`, não precisa.
 
-## 2. Domínio personalizado
+## 2. Domínio personalizado (`www.letzdesignstudio.com.br`)
 
 Documentação oficial: [Configuring a custom domain](https://docs.github.com/pt/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ### No GitHub
 
 1. **Settings → Pages → Custom domain**
-2. Digite o domínio (ex.: `www.cliente.com.br` ou `cliente.com.br`)
+2. Digite `www.letzdesignstudio.com.br`
 3. Salve e aguarde a checagem DNS
 4. Depois de ok, marque **Enforce HTTPS**
 
-### No DNS do domínio (registrador)
+### No DNS do domínio (registrador do cliente)
 
-**Opção A — só www (mais simples)**
+**Opção A — só www (recomendada neste projeto)**
 
 | Tipo | Nome | Valor |
 | --- | --- | --- |
-| CNAME | www | `SEU_USER.github.io` |
+| CNAME | www | `phchemin.github.io` |
 
-**Opção B — apex (cliente.com.br)**
+**Opção B — apex (`letzdesignstudio.com.br`) + www**
 
 | Tipo | Nome | Valor |
 | --- | --- | --- |
@@ -38,7 +42,7 @@ Documentação oficial: [Configuring a custom domain](https://docs.github.com/pt
 | A | @ | `185.199.109.153` |
 | A | @ | `185.199.110.153` |
 | A | @ | `185.199.111.153` |
-| CNAME | www | `SEU_USER.github.io` (recomendado redirecionar www ↔ apex) |
+| CNAME | www | `phchemin.github.io` |
 
 Propagação: minutos a 48h. Enquanto isso o `*.github.io` já funciona.
 
