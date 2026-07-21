@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/*
+ * Letz Studio — tema claro
+ * Primária: rosa #fc549c · Secundária: charcoal #181818 · Fundo: branco
+ */
+@theme {
+  --font-display: "Bagelow Display", "Georgia", serif;
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-ink: #181818;
+  --color-ink-muted: #6b6368;
+  --color-paper: #ffffff;
+  --color-paper-deep: #fff0f5;
+  --color-accent: #fc549c;
+  --color-accent-hover: #e8438a;
+  --color-surface: #ffe6f0;
+  --color-blush: #fc78b4;
+  --color-cream: #f0e4d8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+  }
+
+  body {
+    @apply bg-paper font-sans text-base text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight text-ink;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 45%, transparent);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  .section-pad {
+    @apply px-6 py-20 md:px-10 md:py-28;
+  }
+
+  .slot-empty {
+    @apply border-2 border-dashed border-ink/15 bg-paper-deep/60;
+  }
+
+  .service-block {
+    @apply relative mt-16 scroll-mt-28;
+  }
+
+  .package-card {
+    @apply flex h-full flex-col rounded-2xl border-2 border-ink/10 bg-paper p-6 transition hover:border-accent hover:shadow-[4px_4px_0_0_#fc549c];
+  }
+
+  .package-card-accent {
+    @apply border-accent bg-paper-deep shadow-[4px_4px_0_0_#181818];
+  }
+
+  .sticker-badge {
+    @apply pointer-events-none absolute z-10 w-16 drop-shadow-md md:w-20;
+  }
+
+  .sticker-float {
+    @apply pointer-events-none absolute z-10 select-none drop-shadow-md;
+  }
+
+  .carousel {
+    @apply relative;
+  }
+
+  .carousel-viewport {
+    @apply overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-[4px_4px_0_0_#fc549c];
+  }
+
+  .carousel-track {
+    @apply flex transition-transform duration-500 ease-out;
+  }
+
+  .carousel-slide {
+    @apply w-full shrink-0;
+  }
+
+  .carousel-btn {
+    @apply absolute top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-ink bg-paper text-ink shadow-[3px_3px_0_0_#fc549c] transition hover:bg-accent hover:text-paper md:h-14 md:w-14;
+  }
+
+  .carousel-btn svg {
+    @apply h-6 w-6 shrink-0;
+  }
+
+  .carousel-dot {
+    @apply h-2.5 w-2.5 rounded-full bg-ink/25 transition;
+  }
+
+  .carousel-dot[aria-current="true"] {
+    @apply w-6 bg-accent;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .carousel-track {
+      transition: none;
+    }
+  }
+}
