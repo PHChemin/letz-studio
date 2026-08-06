@@ -7,7 +7,8 @@ Cole as respostas aqui antes de pedir à IA para personalizar o esqueleto.
 - Nome / marca: Letz Studio
 - Segmento: Designer Gráfico / Design para Social Media
 - Cidade / região (se relevante): DDD 42 (WhatsApp)
-- 3 serviços ou produtos: Pacotes de Posts de Instagram, Templates Editáveis e Edições de Vídeo
+- Serviços / produtos: Curso Particular de Design para Redes Sociais; Pacotes de Posts; Identidade Visual; Alinhamento Visual; Posts & Copys; Templates Editáveis
+- Curso (formulário): https://forms.gle/4yDkzMALaXUfQLyo7
 - WhatsApp (com DDI, só números): 5542988179602 · (42) 98817-9602
 - E-mail: letzia.contato@outlook.com
 - Instagram / outras redes: [@letz_studio](https://www.instagram.com/letz_studio/)
