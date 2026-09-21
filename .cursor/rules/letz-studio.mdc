@@ -1,33 +1,37 @@
 ---
-description: Stack e fluxo do esqueleto Letz Studio (landings GitHub Pages)
+description: Stack e fluxo do Letz Studio (React + GitHub Pages)
 alwaysApply: true
 ---
 
 # Letz Studio — regras do projeto
 
-Este repositório é um **esqueleto** para landings freelance estáticas.
+Landing freelance estática do Letz Studio.
 
 ## Stack (não trocar sem pedido explícito)
 
-- Vite + HTML + Tailwind CSS v4 (`@tailwindcss/vite`)
+- Vite + React + TypeScript + Tailwind CSS v4 (`@tailwindcss/vite`)
+- React Router (`/` home, `/curso` página do curso)
 - Deploy: GitHub Pages via `.github/workflows/deploy.yml`
-- Sem React/Next/backend neste template
+- Sem Next/backend neste projeto
 
-## Ao personalizar um cliente
+## Ao personalizar
 
-1. Ler `docs/CLIENT_BRIEF.md` e `docs/PRD.md` (preencher se vazios).
+1. Ler `docs/CLIENT_BRIEF.md` e `docs/PRD.md` (já preenchidos).
 2. Seguir `docs/UI_GUIDANCE.md` e tokens em `src/styles/main.css`.
-3. Trocar placeholders em `index.html` (nome, textos, links, imagens).
+3. Conteúdo da home: `src/pages/HomePage.tsx` + `src/components/site/`.
 4. Contato só via links (`wa.me`, `mailto:`, redes) — Pages é estático.
-5. Deploy e domínio: `docs/DEPLOY.md`.
+5. Preferir componentes em `src/components/` (site, ui, originkit, handmade).
+6. Deploy e domínio: `docs/DEPLOY.md` (`www.letzdesignstudio.com.br`).
 
 ## Design
 
 - Hero full-bleed; marca forte no primeiro viewport.
+- Manter identidade Letz (rosa #fc549c, Bagelow/Outfit/Caveat, stickers).
 - Evitar layouts genéricos “dashboard”, cards no hero, chips flutuantes.
 - Evitar tipografia/cores clichê de IA (Inter, roxo genérico, cream+terracotta default).
 
 ## Build
 
 - `npm run dev` / `npm run build` — o Pages consome apenas `dist/`.
-- Não commitar `node_modules/` nem `dist/`.
+- Build copia `index.html` → `404.html` para SPA (`/curso`).
+- Não commitar `node_modules/`, `dist/` nem `.originkit/`.

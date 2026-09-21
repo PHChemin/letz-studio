@@ -13,7 +13,7 @@
 
 Site padrão (enquanto o DNS não propaga): `https://phchemin.github.io/letz-studio/`
 
-> Se a URL for *project page* (`/letz-studio/`) e os CSS/JS quebrarem **sem** domínio custom, descomente `VITE_BASE_PATH: /letz-studio/` no workflow. Com domínio custom e `base: './'`, não precisa.
+> Se a URL for *project page* (`/letz-studio/`) e os CSS/JS quebrarem **sem** domínio custom, descomente `VITE_BASE_PATH: /letz-studio/` no workflow. Com domínio custom o `base` padrão é `/` (necessário para a rota SPA `/curso`).
 
 ## 2. Domínio personalizado (`www.letzdesignstudio.com.br`)
 

@@ -32,7 +32,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        # Com domínio www.letzdesignstudio.com.br o base './' basta.
+        # Com domínio www.letzdesignstudio.com.br o base '/' (padrão) cobre a SPA (/curso).
         # Só se publicar em phchemin.github.io/letz-studio/ SEM domínio custom:
         # env:
         #   VITE_BASE_PATH: /letz-studio/
