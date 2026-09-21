@@ -94,7 +94,7 @@ export function SiteHeader() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40">
       <div
         className={cn(
-          'mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 pt-5 transition-all duration-300 ease-out md:px-10 md:pt-6',
+          'mx-auto flex w-full max-w-5xl items-center justify-between gap-3 px-6 pt-5 transition-all duration-300 ease-out md:gap-4 md:px-10 md:pt-6',
           hidden
             ? 'pointer-events-none -translate-y-4 opacity-0'
             : 'pointer-events-auto translate-y-0 opacity-100',
@@ -103,7 +103,7 @@ export function SiteHeader() {
         {/* Logo flutuante */}
         <a
           href="/"
-          className="inline-flex h-12 items-center rounded-full border border-ink/8 bg-paper-deep px-3 transition hover:border-ink/15"
+          className="inline-flex h-12 min-w-0 shrink items-center rounded-full border border-ink/8 bg-paper-deep px-3 transition hover:border-ink/15"
           aria-label="Letz Studio — início"
         >
           <img
@@ -143,7 +143,7 @@ export function SiteHeader() {
         {/* Mobile — sheet */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
-            className="inline-flex h-12 items-center gap-2 rounded-full border border-ink/8 bg-paper-deep px-4 text-base font-medium text-ink transition hover:border-ink/15 hover:text-accent md:hidden"
+            className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full border border-ink/8 bg-paper-deep px-4 text-base font-medium text-ink transition hover:border-ink/15 hover:text-accent md:hidden"
             aria-label="Abrir menu"
           >
             <Menu className="size-4" aria-hidden />

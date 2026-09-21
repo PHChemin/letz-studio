@@ -95,8 +95,8 @@ const SERVICES: ServiceCard[] = [
 
 export function ServicosSection() {
   return (
-    <section id="servicos" className="relative section-pad">
-      <div className="relative mx-auto max-w-5xl">
+    <section id="servicos" className="relative overflow-x-clip section-pad">
+      <div className="relative mx-auto max-w-5xl min-w-0">
         <Reveal>
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             Serviços

@@ -13,7 +13,7 @@ export function HeroSection() {
           </p>
         </Reveal>
         <Reveal>
-          <h1 className="max-w-3xl text-6xl leading-[1.02] md:text-8xl">
+          <h1 className="max-w-3xl text-5xl leading-[1.05] break-words md:text-8xl md:leading-[1.02]">
             Ajudo sua marca
             <br />a ser <span className="text-accent">lembrada</span>.
           </h1>

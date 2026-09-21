@@ -26,7 +26,7 @@ export default function HomePage() {
 
       <SiteHeader />
 
-      <main id="conteudo">
+      <main id="conteudo" className="overflow-x-clip">
         <HeroSection />
         <SectionBreak />
         <ServicosSection />

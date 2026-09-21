@@ -8,7 +8,7 @@ import { LINKS } from '@/lib/links'
 
 export function SobreSection() {
   return (
-    <section id="sobre" className="relative section-pad">
+    <section id="sobre" className="relative overflow-x-clip section-pad">
       <img
         src="/images/sticker-star-burst.png"
         alt=""
@@ -18,8 +18,8 @@ export function SobreSection() {
 
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <Reveal>
-          <div className="relative">
-            <div className="aspect-square overflow-hidden rounded-[2rem] bg-accent shadow-[8px_8px_0_0_#181818]">
+          <div className="relative mx-auto max-w-md md:max-w-none">
+            <div className="aspect-square overflow-hidden rounded-[2rem] bg-accent shadow-[6px_6px_0_0_#181818] md:shadow-[8px_8px_0_0_#181818]">
               <img
                 src="/images/portrait.jpg"
                 alt="Leticia Silva — Letz Studio"
@@ -32,7 +32,7 @@ export function SobreSection() {
             <img
               src="/images/sticker-feito.png"
               alt=""
-              className="pointer-events-none absolute -bottom-5 -right-3 z-30 w-44 rotate-6 drop-shadow-md md:-right-4 md:w-52"
+              className="pointer-events-none absolute -bottom-4 right-0 z-30 w-32 rotate-6 drop-shadow-md sm:w-40 md:-right-3 md:w-52"
               width={208}
               aria-hidden
             />

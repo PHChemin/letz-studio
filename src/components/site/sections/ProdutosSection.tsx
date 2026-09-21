@@ -47,7 +47,7 @@ export function ProdutosSection() {
   return (
     <section
       id="produtos"
-      className="relative overflow-hidden border-y border-ink/8 section-pad"
+      className="relative overflow-x-clip border-y border-ink/8 section-pad"
     >
       <div
         className="absolute inset-0 opacity-[0.1]"

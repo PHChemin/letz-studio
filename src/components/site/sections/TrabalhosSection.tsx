@@ -7,7 +7,7 @@ export function TrabalhosSection() {
   return (
     <section
       id="trabalhos"
-      className="relative border-t border-ink/8 bg-paper-deep/50 section-pad"
+      className="relative overflow-x-clip border-t border-ink/8 bg-paper-deep/50 section-pad"
     >
       <img
         src="/images/sticker-produzindo.png"

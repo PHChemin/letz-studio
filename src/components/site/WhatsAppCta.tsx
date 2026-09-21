@@ -32,7 +32,7 @@ export function WhatsAppCta({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'cta-whatsapp group relative inline-flex items-center justify-center gap-2.5 rounded-full bg-accent font-semibold text-paper',
+        'cta-whatsapp group relative inline-flex max-w-full items-center justify-center gap-2.5 rounded-full bg-accent font-semibold text-paper',
         size === 'lg' ? 'px-7 py-3.5 text-base' : 'h-11 px-5 text-sm',
         className,
       )}
@@ -40,9 +40,9 @@ export function WhatsAppCta({
     >
       <span className="cta-whatsapp-ping" aria-hidden />
       <span className="cta-whatsapp-ping cta-whatsapp-ping-delay" aria-hidden />
-      <span className="relative z-10 inline-flex items-center gap-2.5">
+      <span className="relative z-10 inline-flex min-w-0 items-center gap-2.5">
         <WhatsAppIcon className="cta-whatsapp-icon size-4 shrink-0" />
-        {label}
+        <span className="truncate">{label}</span>
       </span>
     </a>
   )
