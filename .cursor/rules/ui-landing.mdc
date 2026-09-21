@@ -1,14 +1,17 @@
 ---
-description: Orientações de UI ao editar HTML/CSS da landing
-globs: index.html,src/**/*.{css,js,html}
+description: Orientações de UI ao editar a landing Letz
+globs: src/**/*.{tsx,ts,css},index.html
 alwaysApply: false
 ---
 
 # UI da landing
 
-- Manter hierarquia: hero → serviços → sobre → contato.
+- Manter hierarquia: hero → serviços → produtos → sobre → trabalhos → feedbacks → contato.
+- Curso pausado: não exibir teaser na home; rota `/curso` permanece como placeholder.
 - Alterar identidade visual pelos tokens `@theme` em `src/styles/main.css`.
-- Preferir tipografia + whitespace a cards/sombras/pills.
-- Imagens: realistas do ofício do cliente; placeholders Unsplash só até o cliente enviar fotos.
-- CTAs principais apontam para `#contato` ou WhatsApp direto.
-- Testar mentalmente mobile: menu `data-nav-*`, CTAs com área de toque boa.
+- Preferir tipografia + whitespace a cards/sombras/pills genéricos.
+- Imagens reais do ofício; stickers da identidade Letz.
+- CTAs principais apontam para `#contato`, WhatsApp ou Hotmart.
+- Home em `src/pages/HomePage.tsx` + `src/components/site/` — preservar visual.
+- Rota `/curso` é placeholder até a landing do curso.
+- Testar mobile: menu do `SiteHeader`, CTAs com área de toque boa.

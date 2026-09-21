@@ -1,27 +1,29 @@
 # Letz Studio
 
-Landing do **Letz Studio** (design para social media) — Vite + Tailwind CSS, hospedagem gratuita via **GitHub Pages**.
+Landing do **Letz Studio** (design para social media) — **Vite + React + TypeScript + Tailwind CSS v4**, hospedagem via **GitHub Pages**.
 
-- Site: [www.letzdesignstudio.com.br](https://www.letzdesignstudio.com.br) (após DNS)
+- Site: [www.letzdesignstudio.com.br](https://www.letzdesignstudio.com.br)
 - Instagram: [@letz_studio](https://www.instagram.com/letz_studio/)
+- Rotas: `/` (home) · `/curso` (placeholder da landing do curso)
 
-## O que é o Vite?
+## Stack
 
-O **Vite** é a ferramenta de desenvolvimento e build:
-
-- No dia a dia (`npm run dev`): sobe um servidor local rápido e atualiza a página ao salvar.
-- Na entrega (`npm run build`): **compila** HTML, CSS (Tailwind) e JS em arquivos estáticos na pasta `dist/`.
-
-O GitHub Pages **não** roda Vite nem `npm`. Ele só recebe o resultado do build (`dist/`), gerado na sua máquina ou no **GitHub Actions**.
+| Camada | Escolha |
+| --- | --- |
+| UI | React 19 + TypeScript |
+| Estilo | Tailwind v4 + tokens Letz / shadcn |
+| Motion bank | Magic UI + Originkit + handmade |
+| Build | Vite → `dist/` |
+| Deploy | GitHub Actions → GitHub Pages |
 
 ```
-código (Tailwind, JS, deps)
+código (React, Tailwind, deps)
         │
-        ▼  vite build
-     dist/  (HTML/CSS/JS prontos)
+        ▼  vite build (+ 404.html para SPA)
+     dist/
         │
         ▼  Actions
-  GitHub Pages (site no ar)
+  GitHub Pages
 ```
 
 ## Começar
@@ -31,28 +33,40 @@ npm install
 npm run dev
 ```
 
-Abra o endereço que o terminal mostrar (geralmente `http://localhost:5173`).
+Abra o endereço do terminal (geralmente `http://localhost:5173`).
 
-## Docs (para você e para a IA)
+## Docs
 
 | Arquivo | Uso |
 | --- | --- |
-| [docs/CLIENT_BRIEF.md](docs/CLIENT_BRIEF.md) | Respostas rápidas do cliente |
-| [docs/PRD.md](docs/PRD.md) | Requisitos do projeto |
-| [docs/SDD.md](docs/SDD.md) | Decisão técnica / arquitetura |
-| [docs/UI_GUIDANCE.md](docs/UI_GUIDANCE.md) | Regras de design |
-| [docs/DEPLOY.md](docs/DEPLOY.md) | Pages, Actions e domínio custom |
+| [docs/CLIENT_BRIEF.md](docs/CLIENT_BRIEF.md) | Respostas do cliente |
+| [docs/PRD.md](docs/PRD.md) | Requisitos |
+| [docs/SDD.md](docs/SDD.md) | Arquitetura |
+| [docs/UI_GUIDANCE.md](docs/UI_GUIDANCE.md) | Design |
+| [docs/DEPLOY.md](docs/DEPLOY.md) | Pages e domínio |
 
-## Deploy
+## Personalizar
 
-1. Suba o repo no GitHub.
-2. **Settings → Pages → Source → GitHub Actions**.
-3. Push na `main` (workflow em `.github/workflows/deploy.yml`).
-4. Domínio: siga `docs/DEPLOY.md`.
+1. Brief / PRD (já preenchidos).
+2. Tokens em `src/styles/main.css`.
+3. Home: `src/pages/HomePage.tsx` + `src/components/site/`.
+4. Curso: `src/pages/CursoPage.tsx`.
+5. `npm run build` → `npm run preview`.
 
-## Personalizar um cliente
+## Banco de componentes
 
-1. Preencha o brief / PRD.
-2. Ajuste tokens em `src/styles/main.css`.
-3. Substitua textos, links e imagens em `index.html`.
-4. `npm run build` e confira com `npm run preview`.
+Ver `src/components/README.md` (ui / originkit / handmade / site).
+
+## Scripts
+
+```bash
+npm run dev       # desenvolvimento
+npm run build     # gera dist/ (+ 404.html)
+npm run preview   # testa o build
+```
+
+## Segurança / o que NÃO versionar
+
+- `.env` / secrets
+- `.originkit/`
+- `node_modules/`, `dist/`
