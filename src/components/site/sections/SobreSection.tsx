@@ -10,16 +10,16 @@ export function SobreSection() {
   return (
     <section id="sobre" className="relative overflow-x-clip section-pad">
       <img
-        src="/images/sticker-star-burst.png"
+        src="/images/sticker-sparkle.png"
         alt=""
-        className="sticker-float right-8 top-16 hidden w-16 rotate-[20deg] md:block"
+        className="sticker-float right-8 top-16 hidden w-12 rotate-[20deg] md:block"
         aria-hidden
       />
 
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <Reveal>
           <div className="relative mx-auto max-w-md md:max-w-none">
-            <div className="aspect-square overflow-hidden rounded-[2rem] bg-accent shadow-[6px_6px_0_0_#181818] md:shadow-[8px_8px_0_0_#181818]">
+            <div className="aspect-square overflow-hidden rounded-[2rem] bg-accent shadow-[6px_6px_0_0_var(--color-accent)] md:shadow-sticker-lg">
               <img
                 src="/images/portrait.jpg"
                 alt="Leticia Silva — Letz Studio"
@@ -66,9 +66,9 @@ export function SobreSection() {
               href={LINKS.behance}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center gap-2.5 rounded-full bg-ink pl-1.5 pr-5 text-sm font-semibold text-paper transition hover:bg-ink/85"
+              className="inline-flex h-12 items-center gap-2.5 rounded-full bg-ink pl-1.5 pr-5 text-sm font-semibold text-charcoal transition hover:bg-accent"
             >
-              <span className="flex size-9 items-center justify-center rounded-full bg-paper text-ink">
+              <span className="flex size-9 items-center justify-center rounded-full bg-charcoal text-ink">
                 <BehanceIcon className="size-4" />
               </span>
               Behance
@@ -78,7 +78,7 @@ export function SobreSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Pinterest Letz Studio"
-              className="inline-flex size-12 items-center justify-center rounded-full bg-ink text-paper transition hover:bg-ink/85"
+              className="inline-flex size-12 items-center justify-center rounded-full bg-ink text-charcoal transition hover:bg-accent"
             >
               <PinterestIcon className="size-5" />
             </a>
@@ -87,7 +87,7 @@ export function SobreSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram @letz_studio"
-              className="inline-flex size-12 items-center justify-center rounded-full bg-ink text-paper transition hover:bg-ink/85"
+              className="inline-flex size-12 items-center justify-center rounded-full bg-ink text-charcoal transition hover:bg-accent"
             >
               <InstagramIcon className="size-5" />
             </a>

@@ -7,7 +7,7 @@ export function TrabalhosSection() {
   return (
     <section
       id="trabalhos"
-      className="relative overflow-x-clip border-t border-ink/8 bg-paper-deep/50 section-pad"
+      className="section-band overflow-x-clip section-pad"
     >
       <img
         src="/images/sticker-produzindo.png"
@@ -37,17 +37,17 @@ export function TrabalhosSection() {
             href={LINKS.behance}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-full max-w-xl items-center justify-between gap-4 rounded-full bg-ink px-5 py-4 text-paper transition hover:bg-ink/90 sm:px-6 sm:py-5"
+            className="group inline-flex w-full max-w-xl items-center justify-between gap-4 rounded-full bg-ink px-5 py-4 text-charcoal shadow-sticker transition hover:bg-accent sm:px-6 sm:py-5"
           >
             <span className="inline-flex items-center gap-3.5">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-paper text-ink sm:size-12">
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-charcoal text-ink sm:size-12">
                 <BehanceIcon className="size-5 sm:size-6" />
               </span>
               <span className="text-left">
                 <span className="block text-base font-semibold sm:text-lg">
                   Ver portfólio no Behance
                 </span>
-                <span className="mt-0.5 block text-sm font-normal text-paper/65">
+                <span className="mt-0.5 block text-sm font-normal text-charcoal/70">
                   Identidades visuais completas e organizadas
                 </span>
               </span>

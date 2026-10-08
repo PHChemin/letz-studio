@@ -32,7 +32,7 @@ export function WhatsAppCta({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'cta-whatsapp group relative inline-flex max-w-full items-center justify-center gap-2.5 rounded-full bg-accent font-semibold text-paper',
+        'cta-whatsapp group relative inline-flex max-w-full items-center justify-center gap-2.5 rounded-full bg-accent font-semibold text-charcoal',
         size === 'lg' ? 'px-7 py-3.5 text-base' : 'h-11 px-5 text-sm',
         className,
       )}

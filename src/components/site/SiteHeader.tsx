@@ -103,7 +103,7 @@ export function SiteHeader() {
         {/* Logo flutuante */}
         <a
           href="/"
-          className="inline-flex h-12 min-w-0 shrink items-center rounded-full border border-ink/8 bg-paper-deep px-3 transition hover:border-ink/15"
+          className="inline-flex h-12 min-w-0 shrink items-center rounded-full border border-ink/10 bg-paper-deep/85 px-3 backdrop-blur-md transition hover:border-ink/20"
           aria-label="Letz Studio — início"
         >
           <img
@@ -117,7 +117,7 @@ export function SiteHeader() {
 
         {/* Dock de navegação — desktop, alinhado à direita */}
         <nav
-          className="hidden h-12 items-center gap-0.5 rounded-full border border-ink/8 bg-paper-deep px-1.5 md:flex"
+          className="hidden h-12 items-center gap-0.5 rounded-full border border-ink/10 bg-paper-deep/85 px-1.5 backdrop-blur-md md:flex"
           aria-label="Navegação principal"
         >
           {NAV_LINKS.map(({ href, id, label }) => {
@@ -143,7 +143,7 @@ export function SiteHeader() {
         {/* Mobile — sheet */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
-            className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full border border-ink/8 bg-paper-deep px-4 text-base font-medium text-ink transition hover:border-ink/15 hover:text-accent md:hidden"
+            className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full border border-ink/10 bg-paper-deep/85 px-4 text-base font-medium text-ink backdrop-blur-md transition hover:border-ink/20 hover:text-accent md:hidden"
             aria-label="Abrir menu"
           >
             <Menu className="size-4" aria-hidden />
@@ -152,7 +152,7 @@ export function SiteHeader() {
 
           <SheetContent
             side="right"
-            className="pointer-events-auto w-[min(100%,20rem)] border-l border-ink/10 bg-paper text-ink sm:max-w-sm"
+            className="pointer-events-auto w-[min(100%,20rem)] border-l border-ink/10 bg-paper-deep text-ink sm:max-w-sm"
           >
             <SheetHeader className="border-b border-ink/8 px-5 pb-4 pt-2">
               <SheetTitle className="font-display text-2xl text-ink">
@@ -175,8 +175,8 @@ export function SiteHeader() {
                     className={cn(
                       'rounded-xl px-4 py-3 text-lg font-medium transition',
                       active === id
-                        ? 'bg-paper-deep text-accent'
-                        : 'text-ink/85 hover:bg-paper-deep hover:text-accent',
+                        ? 'bg-surface text-accent'
+                        : 'text-ink/85 hover:bg-surface hover:text-accent',
                     )}
                   >
                     {label}

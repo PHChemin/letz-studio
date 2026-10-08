@@ -13,7 +13,7 @@ Cole as respostas aqui antes de pedir à IA para personalizar o esqueleto.
 - E-mail: letzia.contato@outlook.com
 - Instagram / outras redes: [@letz_studio](https://www.instagram.com/letz_studio/)
 - Domínio desejado: www.letzdesignstudio.com.br
-- Referências visuais: `public/identidade-visual/` (rosa #fc549c, charcoal, stickers, monograma LS)
+- Referências visuais: `public/identidade-visual/` (rosa #f39bc4, charcoal #242424, neve #fffafa, stickers, monograma LS)
 - Foto principal (hero) e foto “sobre”: textura 17.png + retrato 21.png
 
 ## Frases
@@ -24,5 +24,5 @@ Cole as respostas aqui antes de pedir à IA para personalizar o esqueleto.
 
 ## Preferências
 
-- Clima: Tema claro (branco) · rosa primária · charcoal secundário
+- Clima: Tema escuro (charcoal #222222, como o banner) · rosa suave primária · neve para texto
 - O que NÃO quer no visual: Roxo genérico, look cream+terracotta, layout tipo dashboard

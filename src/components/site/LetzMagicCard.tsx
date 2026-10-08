@@ -6,14 +6,14 @@ type LetzMagicCardProps = {
   children: ReactNode
   className?: string
   contentClassName?: string
-  /** Pink border + charcoal offset — “fav” packages */
+  /** Pink border + deep-pink offset — “fav” packages */
   accent?: boolean
-  /** Charcoal offset shadow (templates) instead of pink hover shadow */
+  /** Fixed deep-pink offset shadow instead of the pink hover shadow */
   charcoalShadow?: boolean
 }
 
 /**
- * MagicCard tuned to Letz identity: pink/charcoal gradient glow,
+ * MagicCard tuned to Letz identity: pink/charcoal gradient border,
  * scrapbook radius/shadow language kept on the shell.
  */
 export function LetzMagicCard({
@@ -28,22 +28,21 @@ export function LetzMagicCard({
       className={cn(
         'h-full rounded-2xl border-2',
         accent
-          ? 'border-accent shadow-[4px_4px_0_0_#181818]'
+          ? 'border-accent shadow-pop'
           : charcoalShadow
-            ? 'border-ink/10 shadow-[4px_4px_0_0_#181818]'
-            : 'border-ink/10 shadow-none transition-shadow hover:shadow-[4px_4px_0_0_#fc549c]',
+            ? 'border-ink/10 shadow-pop'
+            : 'border-ink/10 shadow-none transition-shadow hover:shadow-sticker',
         className,
       )}
       gradientSize={240}
-      gradientFrom="#fc549c"
-      gradientTo="#181818"
-      gradientColor="rgba(252, 84, 156, 0.14)"
+      gradientFrom="#f39bc4"
+      gradientTo="#242424"
+      gradientColor="rgba(243, 155, 196, 0.08)"
       gradientOpacity={0.5}
     >
       <div
         className={cn(
-          'relative flex h-full flex-col',
-          accent ? 'bg-paper-deep' : 'bg-paper',
+          'relative flex h-full flex-col bg-surface',
           contentClassName,
         )}
       >

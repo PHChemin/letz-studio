@@ -11,11 +11,16 @@ Fonte bruta: `public/identidade-visual/` · Assets web: `public/images/`
 | Display | Bagelow Display |
 | Corpo | Outfit |
 | Script / acento | Caveat |
-| Fundo (tema claro) | `#ffffff` / `#fff0f5` |
-| Texto (ink) | `#181818` |
-| Accent (primária) | `#fc549c` |
-| Blush | `#fc78b4` |
-| Clima | Claro — rosa + charcoal, scrapbook / sticker |
+| Fundo base (`paper`) | `#222222` (charcoal do banner) + textura de tecido |
+| Faixa de seção (`section-band`) | charcoal mais fundo (~`#1b1b1b`) com costura tracejada |
+| Cards (`surface`) | `#2a2a2a` |
+| Texto (`ink`) | `#fffafa` (neve) · secundário `#bdb4b8` |
+| Charcoal da marca (`charcoal`) | `#242424` — texto sobre rosa/neve |
+| Accent (primária) | `#f39bc4` · sombra “pop” `#b9668e` |
+| Clima | Escuro — charcoal + rosa suave, scrapbook / sticker |
+
+O rosa choque `#fc549c` foi aposentado (stickers, logo e favicons já recoloridos).
+Ritmo das seções: base → faixa → base… (Produtos, Trabalhos, Contato e rodapé são faixas).
 
 Slots `#servico-1..3` e `#produto-1..3` aguardam conteúdo do cliente.
 

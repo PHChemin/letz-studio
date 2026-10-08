@@ -47,10 +47,10 @@ export function ProdutosSection() {
   return (
     <section
       id="produtos"
-      className="relative overflow-x-clip border-y border-ink/8 section-pad"
+      className="section-band overflow-x-clip section-pad"
     >
       <div
-        className="absolute inset-0 opacity-[0.1]"
+        className="absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage: "url('/images/pattern-waves.png')",
           backgroundSize: 'cover',
@@ -58,7 +58,6 @@ export function ProdutosSection() {
         }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-surface/90" aria-hidden />
 
       <div className="relative mx-auto max-w-5xl">
         <Reveal>
@@ -86,7 +85,7 @@ export function ProdutosSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-ink/10 bg-ink shadow-[3px_3px_0_0_#fc549c] outline-none transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent',
+                  'group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-ink/10 bg-surface shadow-sticker-sm outline-none transition hover:-translate-y-0.5 hover:shadow-sticker focus-visible:ring-2 focus-visible:ring-accent',
                   t.className,
                 )}
               >
@@ -97,14 +96,14 @@ export function ProdutosSection() {
                   loading="lazy"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/45 to-ink/10"
+                  className="absolute inset-0 bg-gradient-to-t from-paper-deep from-15% via-paper-deep/75 via-50% to-paper-deep/10"
                   aria-hidden
                 />
                 <div className="relative z-10 p-4 md:p-5">
-                  <h3 className="font-display text-xl text-paper md:text-2xl">
+                  <h3 className="font-display text-xl md:text-2xl">
                     {t.title}
                   </h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-paper/80">
+                  <p className="mt-1 line-clamp-2 text-sm text-ink/80">
                     {t.description}
                   </p>
                   <span className="mt-3 inline-flex text-sm font-semibold text-accent transition group-hover:text-blush">
