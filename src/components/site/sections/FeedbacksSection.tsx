@@ -13,7 +13,7 @@ const FEEDBACKS = [
 
 function FeedbackCard({ src }: { src: string }) {
   return (
-    <figure className="h-28 w-[9.5rem] shrink-0 overflow-hidden rounded-xl border border-ink/10 bg-paper-deep shadow-[2px_2px_0_0_#fc549c] sm:h-32 sm:w-[11rem]">
+    <figure className="h-28 w-[9.5rem] shrink-0 overflow-hidden rounded-xl border border-ink/10 bg-surface shadow-sticker-sm sm:h-32 sm:w-[11rem]">
       <img
         src={src}
         alt="Feedback de cliente"

@@ -10,14 +10,14 @@ import { ServicosSection } from '@/components/site/sections/ServicosSection'
 import { SobreSection } from '@/components/site/sections/SobreSection'
 import { TrabalhosSection } from '@/components/site/sections/TrabalhosSection'
 
-const LETZ_PINK = '#fc549c'
+const LETZ_PINK = '#f39bc4'
 
 export default function HomePage() {
   return (
     <>
       <a
         href="#conteudo"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-3 focus:py-2 focus:text-paper"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-3 focus:py-2 focus:text-charcoal"
       >
         Ir para o conteúdo
       </a>

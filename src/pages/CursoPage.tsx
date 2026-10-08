@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
  */
 export default function CursoPage() {
   return (
-    <main className="flex min-h-[100svh] flex-col items-center justify-center bg-paper-deep px-6 text-center text-ink">
+    <main className="flex min-h-[100svh] flex-col items-center justify-center px-6 text-center text-ink">
       <p className="font-sans text-sm font-semibold uppercase tracking-[0.28em] text-accent">
         Em breve
       </p>
@@ -19,7 +19,7 @@ export default function CursoPage() {
       </p>
       <Link
         to="/"
-        className="mt-10 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-paper transition hover:bg-accent-hover"
+        className="mt-10 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-charcoal shadow-pop transition hover:bg-accent-hover"
       >
         Voltar ao início
       </Link>

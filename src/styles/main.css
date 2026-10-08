@@ -5,8 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Letz Studio — tema claro
- * Primária: rosa #fc549c · Secundária: charcoal #181818 · Fundo: branco
+ * Letz Studio — tema escuro
+ * Paleta da marca: charcoal #242424 · rosa #f39bc4 · neve #fffafa
+ *
+ * Tokens semânticos: `ink` é sempre a cor do texto (neve) e `paper` a do
+ * fundo (charcoal do banner, #222222). As variações de charcoal criam as
+ * camadas: faixa (mais funda) < base < surface (cards).
  */
 @theme {
   --font-display: "Bagelow Display", "Georgia", serif;
@@ -14,15 +18,22 @@
   --font-script: "Caveat", cursive;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --color-ink: #181818;
-  --color-ink-muted: #6b6368;
-  --color-paper: #ffffff;
-  --color-paper-deep: #fff0f5;
-  --color-accent: #fc549c;
-  --color-accent-hover: #e8438a;
-  --color-surface: #ffe6f0;
-  --color-blush: #fc78b4;
-  --color-cream: #f0e4d8;
+  --color-ink: #fffafa;
+  --color-ink-muted: #bdb4b8;
+  --color-paper: #222222;
+  --color-paper-deep: #1b1b1b;
+  --color-surface: #2a2a2a;
+  --color-charcoal: #242424;
+  --color-accent: #f39bc4;
+  --color-accent-hover: #f7b6d4;
+  --color-accent-deep: #b9668e;
+  --color-blush: #f9cfe2;
+
+  --shadow-pop: 4px 4px 0 0 #b9668e;
+  --shadow-pop-sm: 2px 2px 0 0 #b9668e;
+  --shadow-sticker: 4px 4px 0 0 #f39bc4;
+  --shadow-sticker-sm: 2px 2px 0 0 #f39bc4;
+  --shadow-sticker-lg: 8px 8px 0 0 #f39bc4;
 }
 
 @theme inline {
@@ -47,7 +58,7 @@
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   /* Keep Letz brand pink as Tailwind `accent` (site uses text-accent / bg-accent) */
-  --color-accent: #fc549c;
+  --color-accent: #f39bc4;
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -128,40 +139,40 @@
   }
 }
 
-/* Letz light theme mapped to shadcn tokens (component bank) */
+/* Letz dark theme mapped to shadcn tokens (component bank) */
 :root {
-  --background: #ffffff;
-  --foreground: #181818;
-  --card: #ffffff;
-  --card-foreground: #181818;
-  --popover: #ffffff;
-  --popover-foreground: #181818;
-  --primary: #fc549c;
-  --primary-foreground: #ffffff;
-  --secondary: #fff0f5;
-  --secondary-foreground: #181818;
-  --muted: #ffe6f0;
-  --muted-foreground: #6b6368;
-  --accent: #fc549c;
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: rgb(24 24 24 / 10%);
-  --input: rgb(24 24 24 / 12%);
-  --ring: #fc549c;
-  --chart-1: #fc549c;
-  --chart-2: #181818;
-  --chart-3: #6b6368;
-  --chart-4: #fc78b4;
-  --chart-5: #ffe6f0;
+  --background: #222222;
+  --foreground: #fffafa;
+  --card: #2a2a2a;
+  --card-foreground: #fffafa;
+  --popover: #222222;
+  --popover-foreground: #fffafa;
+  --primary: #f39bc4;
+  --primary-foreground: #242424;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #fffafa;
+  --muted: #2a2a2a;
+  --muted-foreground: #bdb4b8;
+  --accent: #f39bc4;
+  --accent-foreground: #242424;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgb(255 250 250 / 10%);
+  --input: rgb(255 250 250 / 14%);
+  --ring: #f39bc4;
+  --chart-1: #f39bc4;
+  --chart-2: #fffafa;
+  --chart-3: #bdb4b8;
+  --chart-4: #f9cfe2;
+  --chart-5: #2a2a2a;
   --radius: 0.625rem;
-  --sidebar: #fff0f5;
-  --sidebar-foreground: #181818;
-  --sidebar-primary: #fc549c;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ffe6f0;
-  --sidebar-accent-foreground: #181818;
-  --sidebar-border: rgb(24 24 24 / 10%);
-  --sidebar-ring: #fc549c;
+  --sidebar: #1b1b1b;
+  --sidebar-foreground: #fffafa;
+  --sidebar-primary: #f39bc4;
+  --sidebar-primary-foreground: #242424;
+  --sidebar-accent: #2a2a2a;
+  --sidebar-accent-foreground: #fffafa;
+  --sidebar-border: rgb(255 250 250 / 10%);
+  --sidebar-ring: #f39bc4;
 }
 
 @layer base {
@@ -169,12 +180,27 @@
     scroll-behavior: smooth;
     font-size: 18px;
     overflow-x: clip;
+    color-scheme: dark;
+    background-color: var(--color-paper);
+    scrollbar-color: #4a4a4a var(--color-paper-deep);
   }
 
+  /* Fundo fica no html para a textura (z-index -1) aparecer acima dele */
   body {
-    @apply bg-paper font-sans text-base text-ink antialiased;
+    @apply font-sans text-base text-ink antialiased;
     overflow-x: clip;
     max-width: 100%;
+  }
+
+  /* Textura de tecido do banner, atrás de todo o conteúdo */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -0.4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   #root {
@@ -193,8 +219,8 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-accent) 45%, transparent);
-    color: var(--color-ink);
+    background: var(--color-accent);
+    color: var(--color-charcoal);
   }
 }
 
@@ -203,8 +229,39 @@
     @apply px-6 py-20 md:px-10 md:py-28;
   }
 
+  /*
+   * Faixa de seção: charcoal mais fundo, translúcido para a textura do
+   * fundo continuar aparecendo, com costura tracejada nas bordas.
+   */
+  .section-band {
+    position: relative;
+    background-color: rgb(0 0 0 / 0.22);
+  }
+
+  .section-band::before,
+  .section-band::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    height: 1px;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-ink) 16%, transparent) 0 8px,
+      transparent 8px 14px
+    );
+  }
+
+  .section-band::before {
+    top: 0;
+  }
+
+  .section-band::after {
+    bottom: 0;
+  }
+
   .slot-empty {
-    @apply border-2 border-dashed border-ink/15 bg-paper-deep/60;
+    @apply border-2 border-dashed border-ink/15 bg-surface/60;
   }
 
   .service-block {
@@ -212,11 +269,11 @@
   }
 
   .package-card {
-    @apply flex h-full flex-col rounded-2xl border-2 border-ink/10 bg-paper p-6 transition hover:border-accent hover:shadow-[4px_4px_0_0_#fc549c];
+    @apply flex h-full flex-col rounded-2xl border-2 border-ink/10 bg-surface p-6 transition hover:border-accent hover:shadow-sticker;
   }
 
   .package-card-accent {
-    @apply border-accent bg-paper-deep shadow-[4px_4px_0_0_#181818];
+    @apply border-accent bg-surface shadow-pop;
   }
 
   .sticker-badge {
@@ -280,7 +337,7 @@
   }
 
   .carousel-viewport {
-    @apply overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-[4px_4px_0_0_#fc549c];
+    @apply overflow-hidden rounded-2xl border border-ink/10 bg-surface shadow-sticker;
   }
 
   .carousel-track {
@@ -292,7 +349,7 @@
   }
 
   .carousel-btn {
-    @apply absolute top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-ink bg-paper text-ink shadow-[3px_3px_0_0_#fc549c] transition hover:bg-accent hover:text-paper md:h-14 md:w-14;
+    @apply absolute top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-ink bg-paper text-ink shadow-sticker-sm transition hover:bg-accent hover:text-charcoal md:h-14 md:w-14;
   }
 
   .carousel-btn svg {
@@ -325,7 +382,7 @@
     position: relative;
     overflow: visible;
     isolation: isolate;
-    box-shadow: 4px 4px 0 0 #181818;
+    box-shadow: var(--shadow-pop);
     animation: cta-float 2.8s ease-in-out infinite;
   }
 
@@ -344,12 +401,12 @@
     background-color: var(--color-accent-hover);
     animation-play-state: paused;
     transform: translateY(-1px);
-    box-shadow: 5px 5px 0 0 #181818;
+    box-shadow: 5px 5px 0 0 var(--color-accent-deep);
   }
 
   .cta-whatsapp:active {
     transform: translateY(1px);
-    box-shadow: 2px 2px 0 0 #181818;
+    box-shadow: var(--shadow-pop-sm);
   }
 
   .cta-whatsapp-ping-delay {
@@ -374,24 +431,24 @@
   }
 
   .cta-outline:hover {
-    box-shadow: 3px 3px 0 0 #fc549c;
+    box-shadow: 3px 3px 0 0 var(--color-accent);
     transform: translateY(-1px);
   }
 
   .cta-outline:active {
     transform: translateY(1px);
-    box-shadow: 1px 1px 0 0 #fc549c;
+    box-shadow: 1px 1px 0 0 var(--color-accent);
   }
 
   @keyframes cta-float {
     0%,
     100% {
       transform: translateY(0);
-      box-shadow: 4px 4px 0 0 #181818;
+      box-shadow: var(--shadow-pop);
     }
     50% {
       transform: translateY(-3px);
-      box-shadow: 5px 6px 0 0 #181818;
+      box-shadow: 5px 6px 0 0 var(--color-accent-deep);
     }
   }
 

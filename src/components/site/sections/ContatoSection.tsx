@@ -11,13 +11,13 @@ export function ContatoSection() {
   return (
     <section
       id="contato"
-      className="relative overflow-hidden border-t border-ink/8 bg-paper-deep"
+      className="section-band overflow-hidden"
     >
       <Particles
         className="absolute inset-0"
         quantity={48}
         ease={70}
-        color="#fc549c"
+        color="#f39bc4"
         size={0.45}
         staticity={40}
       />
@@ -45,9 +45,9 @@ export function ContatoSection() {
               href={LINKS.briefing}
               target="_blank"
               rel="noopener noreferrer"
-              background="#fc549c"
-              shimmerColor="#ffffff"
-              className="px-7 py-3.5 text-base font-semibold shadow-[4px_4px_0_0_#181818]"
+              background="#f39bc4"
+              shimmerColor="#fffafa"
+              className="border-accent px-7 py-3.5 text-base font-semibold text-charcoal shadow-pop"
             >
               Preencher pré-briefing
             </ShimmerButton>
@@ -59,7 +59,7 @@ export function ContatoSection() {
               target="_blank"
               rel="noopener noreferrer"
               size="md"
-              className="border-ink/20 bg-paper/90 backdrop-blur-sm"
+              className="border-ink/25 bg-paper/70 backdrop-blur-sm"
             >
               <InstagramIcon className="size-4" />
               Instagram
@@ -69,7 +69,7 @@ export function ContatoSection() {
               target="_blank"
               rel="noopener noreferrer"
               size="md"
-              className="border-ink/20 bg-paper/90 backdrop-blur-sm"
+              className="border-ink/25 bg-paper/70 backdrop-blur-sm"
             >
               <BehanceIcon className="size-4" />
               Behance
@@ -77,7 +77,7 @@ export function ContatoSection() {
             <OutlineCta
               href={LINKS.email}
               size="md"
-              className="border-ink/20 bg-paper/90 backdrop-blur-sm"
+              className="border-ink/25 bg-paper/70 backdrop-blur-sm"
             >
               <Mail className="size-4" />
               E-mail

@@ -3,7 +3,7 @@ import { LINKS } from '@/lib/links'
 
 export function CursoTeaserSection() {
   return (
-    <section id="curso" className="relative border-t border-ink/8 section-pad">
+    <section id="curso" className="relative section-band section-pad">
       <img
         src="/images/sticker-sparkle.png"
         alt=""
@@ -28,7 +28,7 @@ export function CursoTeaserSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={LINKS.cursoForm}
-              className="rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-paper shadow-[4px_4px_0_0_#181818] transition hover:bg-accent-hover"
+              className="rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-charcoal shadow-pop transition hover:bg-accent-hover"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,7 +36,7 @@ export function CursoTeaserSection() {
             </a>
             <a
               href={LINKS.whatsappCurso}
-              className="rounded-full border-2 border-ink px-7 py-3.5 text-base font-semibold text-ink transition hover:bg-ink hover:text-paper"
+              className="rounded-full border-2 border-ink px-7 py-3.5 text-base font-semibold text-ink transition hover:bg-ink hover:text-charcoal"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,7 @@ export function CursoTeaserSection() {
         </Reveal>
 
         <Reveal>
-          <div className="overflow-hidden rounded-[2rem] bg-ink shadow-[8px_8px_0_0_#fc549c]">
+          <div className="overflow-hidden rounded-[2rem] bg-surface shadow-sticker-lg">
             <img
               src="/images/Curso.png"
               alt="Curso particular de Design gráfico para redes sociais — Letz Studio"

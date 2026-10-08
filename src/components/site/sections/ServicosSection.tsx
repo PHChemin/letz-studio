@@ -30,8 +30,8 @@ const SERVICES: ServiceCard[] = [
         planos sob medida — carrosséis, estáticos e stories alinhados à sua marca.
       </>
     ),
-    image: '/images/servicos/servico-posts.jpg',
-    imageAlt: 'Ilustração — Design para Posts',
+    image: '/images/design-posts.png',
+    imageAlt: 'Arte de posts para Instagram — Design para Posts',
     sticker: '/images/sticker-produzindo.png',
     stickerClass: 'sticker-badge -right-2 -top-3 w-24 rotate-6 md:w-28',
     whatsapp: LINKS.whatsappPosts,
@@ -48,48 +48,12 @@ const SERVICES: ServiceCard[] = [
         Instagram, com personalidade e consistência.
       </>
     ),
-    image: '/images/servicos/servico-identidade.jpg',
-    imageAlt: 'Ilustração — Identidade Visual',
+    image: '/images/identidade-visual.png',
+    imageAlt: 'Identidade visual aplicada em notebook, caderno e cartões',
     sticker: '/images/sticker-sparkle.png',
     stickerClass: 'sticker-badge -right-1 -top-4 w-14 rotate-12 md:w-16',
     whatsapp: LINKS.whatsappIdentidade,
     cta: 'Quero minha identidade',
-  },
-  {
-    id: 'servico-alinhamento',
-    index: '03',
-    title: 'Alinhamento Visual',
-    description: (
-      <>
-        Tipografia, paleta e estilo para uma presença{' '}
-        <strong className="font-semibold text-ink">reconhecível</strong> — mesmo
-        sem um logo novo.
-      </>
-    ),
-    image: '/images/servicos/servico-alinhamento.jpg',
-    imageAlt: 'Ilustração — Alinhamento Visual',
-    sticker: '/images/sticker-heart.png',
-    stickerClass: 'sticker-badge -right-1 -top-2 w-14 -rotate-12',
-    whatsapp: LINKS.whatsappAlinhamento,
-    cta: 'Quero alinhar minha marca',
-  },
-  {
-    id: 'servico-copys',
-    index: '04',
-    title: 'Posts & Copys',
-    description: (
-      <>
-        Design + texto: artes com{' '}
-        <strong className="font-semibold text-ink">copys e CTAs</strong> que
-        conversam com o seu público.
-      </>
-    ),
-    image: '/images/servicos/servico-copys.jpg',
-    imageAlt: 'Ilustração — Posts e Copys',
-    sticker: '/images/sticker-feito.png',
-    stickerClass: 'sticker-badge -right-2 -top-1 w-28 rotate-6 md:w-32',
-    whatsapp: LINKS.whatsappCopys,
-    cta: 'Quero posts com copy',
   },
 ]
 
@@ -161,7 +125,7 @@ export function ServicosSection() {
                         href={service.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="border-accent/20 bg-paper text-ink"
+                        className="border-accent/30 bg-paper text-ink"
                       >
                         {service.cta}
                       </InteractiveHoverButton>
