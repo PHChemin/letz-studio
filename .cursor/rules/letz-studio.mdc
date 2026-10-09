@@ -26,7 +26,7 @@ Landing freelance estática do Letz Studio.
 ## Design
 
 - Hero full-bleed; marca forte no primeiro viewport.
-- Manter identidade Letz: tema escuro (charcoal #242424 / fundo #222222, rosa #f39bc4, neve #fffafa), Bagelow/Outfit/Caveat, stickers. O rosa choque #fc549c foi aposentado.
+- Manter identidade Letz: tema escuro (charcoal #242424 / fundo #222222, rosa #f39bc4, neve #fffafa), Bagelow/Outfit/Caveat. Sem stickers. O rosa choque #fc549c foi aposentado.
 - Sem seções brancas/rosas: dividir seções com faixas `section-band` (charcoal mais fundo + costura tracejada) e cards `bg-surface`.
 - Evitar layouts genéricos “dashboard”, cards no hero, chips flutuantes.
 - Evitar tipografia/cores clichê de IA (Inter, roxo genérico, cream+terracotta default).

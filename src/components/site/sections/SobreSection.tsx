@@ -9,13 +9,6 @@ import { LINKS } from '@/lib/links'
 export function SobreSection() {
   return (
     <section id="sobre" className="relative overflow-x-clip section-pad">
-      <img
-        src="/images/sticker-sparkle.png"
-        alt=""
-        className="sticker-float right-8 top-16 hidden w-12 rotate-[20deg] md:block"
-        aria-hidden
-      />
-
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <Reveal>
           <div className="relative mx-auto max-w-md md:max-w-none">
@@ -29,13 +22,6 @@ export function SobreSection() {
                 height={800}
               />
             </div>
-            <img
-              src="/images/sticker-feito.png"
-              alt=""
-              className="pointer-events-none absolute -bottom-4 right-0 z-30 w-32 rotate-6 drop-shadow-md sm:w-40 md:-right-3 md:w-52"
-              width={208}
-              aria-hidden
-            />
           </div>
         </Reveal>
 

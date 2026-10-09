@@ -276,15 +276,7 @@
     @apply border-accent bg-surface shadow-pop;
   }
 
-  .sticker-badge {
-    @apply pointer-events-none absolute z-10 w-16 drop-shadow-md md:w-20;
-  }
-
-  .sticker-float {
-    @apply pointer-events-none absolute z-10 select-none drop-shadow-md;
-  }
-
-  /* Divisória scrapbook entre seções (Curso → Serviços) */
+  /* Divisória entre o hero e os serviços */
   .section-break {
     @apply relative mx-auto flex max-w-5xl items-center gap-4 py-2 md:gap-6;
   }
@@ -316,20 +308,6 @@
 
   .section-break-rail::after {
     right: 0;
-  }
-
-  .section-break-mark {
-    @apply relative flex shrink-0 items-center justify-center;
-    transform: rotate(-8deg);
-  }
-
-  .section-break-mark::before {
-    content: "";
-    position: absolute;
-    inset: -0.35rem;
-    border-radius: 9999px;
-    border: 1.5px dashed color-mix(in srgb, var(--color-accent) 55%, transparent);
-    transform: rotate(12deg);
   }
 
   .carousel {

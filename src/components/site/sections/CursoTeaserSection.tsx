@@ -4,13 +4,6 @@ import { LINKS } from '@/lib/links'
 export function CursoTeaserSection() {
   return (
     <section id="curso" className="relative section-band section-pad">
-      <img
-        src="/images/sticker-sparkle.png"
-        alt=""
-        className="sticker-float left-6 top-14 hidden w-14 -rotate-12 md:block"
-        aria-hidden
-      />
-
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <Reveal>
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.28em] text-accent">

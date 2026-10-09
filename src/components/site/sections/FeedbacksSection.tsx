@@ -27,13 +27,6 @@ function FeedbackCard({ src }: { src: string }) {
 export function FeedbacksSection() {
   return (
     <section id="feedbacks" className="relative overflow-hidden py-14 md:py-16">
-      <img
-        src="/images/sticker-feito.png"
-        alt=""
-        className="sticker-float right-6 top-8 hidden w-24 rotate-6 md:block"
-        aria-hidden
-      />
-
       <div className="relative mx-auto max-w-5xl px-6 md:px-10">
         <Reveal>
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.28em] text-accent">
