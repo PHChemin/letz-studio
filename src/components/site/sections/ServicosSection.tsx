@@ -12,8 +12,6 @@ type ServiceCard = {
   description: ReactNode
   image: string
   imageAlt: string
-  sticker: string
-  stickerClass: string
   whatsapp: string
   cta: string
 }
@@ -32,8 +30,6 @@ const SERVICES: ServiceCard[] = [
     ),
     image: '/images/design-posts.png',
     imageAlt: 'Arte de posts para Instagram — Design para Posts',
-    sticker: '/images/sticker-produzindo.png',
-    stickerClass: 'sticker-badge -right-2 -top-3 w-24 rotate-6 md:w-28',
     whatsapp: LINKS.whatsappPosts,
     cta: 'Quero saber mais',
   },
@@ -50,8 +46,6 @@ const SERVICES: ServiceCard[] = [
     ),
     image: '/images/identidade-visual.png',
     imageAlt: 'Identidade visual aplicada em notebook, caderno e cartões',
-    sticker: '/images/sticker-sparkle.png',
-    stickerClass: 'sticker-badge -right-1 -top-4 w-14 rotate-12 md:w-16',
     whatsapp: LINKS.whatsappIdentidade,
     cta: 'Quero minha identidade',
   },
@@ -95,12 +89,6 @@ export function ServicosSection() {
                       alt={service.imageAlt}
                       className="h-full w-full object-cover"
                       loading="lazy"
-                    />
-                    <img
-                      src={service.sticker}
-                      alt=""
-                      className={service.stickerClass}
-                      aria-hidden
                     />
                   </figure>
 

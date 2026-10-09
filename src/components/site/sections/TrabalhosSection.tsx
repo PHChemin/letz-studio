@@ -9,13 +9,6 @@ export function TrabalhosSection() {
       id="trabalhos"
       className="section-band overflow-x-clip section-pad"
     >
-      <img
-        src="/images/sticker-produzindo.png"
-        alt=""
-        className="sticker-float left-4 top-10 hidden w-32 -rotate-6 lg:block"
-        aria-hidden
-      />
-
       <div className="relative mx-auto max-w-5xl">
         <Reveal>
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.28em] text-accent">
