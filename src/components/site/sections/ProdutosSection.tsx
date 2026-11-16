@@ -1,47 +1,5 @@
 import { Reveal } from '@/components/site/Reveal'
-import { BentoGrid } from '@/components/ui/bento-grid'
-import { cn } from '@/lib/utils'
 import { LINKS } from '@/lib/links'
-
-const TEMPLATES = [
-  {
-    id: 'template-midia-kit',
-    title: 'Template Mídia Kit',
-    description:
-      '100% Canva — kit visual pronto pra apresentar o trabalho com autoridade.',
-    href: LINKS.hotmart.midiaKit,
-    image: '/images/templates/midia-kit.jpg',
-    imageAlt: 'Template Mídia Kit — Canva',
-    className: 'col-span-1 md:col-span-2 md:row-span-2',
-  },
-  {
-    id: 'template-social-media',
-    title: 'Kit Social Media Viral',
-    description: 'Posts editáveis com cara de tendência.',
-    href: LINKS.hotmart.socialMedia,
-    image: '/images/templates/social-media-viral.jpg',
-    imageAlt: 'Kit Social Media Viral — templates editáveis',
-    className: 'col-span-1',
-  },
-  {
-    id: 'template-lash-designer',
-    title: 'Lash Designer',
-    description: 'Feed alinhado pra quem trabalha com cílios.',
-    href: LINKS.hotmart.lash,
-    image: '/images/templates/lash-designer.jpg',
-    imageAlt: 'Template Lash Designer — Canva editável',
-    className: 'col-span-1',
-  },
-  {
-    id: 'template-glam-beauty',
-    title: 'Glam & Beauty',
-    description: 'Vibe glam pra lojas de maquiagem e beleza.',
-    href: LINKS.hotmart.glam,
-    image: '/images/templates/glam-beauty.jpg',
-    imageAlt: 'Template Glam & Beauty — Canva editável',
-    className: 'col-span-1 md:col-span-2',
-  },
-] as const
 
 export function ProdutosSection() {
   return (
@@ -69,50 +27,55 @@ export function ProdutosSection() {
           <h2 className="mt-3 text-4xl md:text-6xl">Templates editáveis</h2>
         </Reveal>
         <Reveal>
-          <p className="mt-4 max-w-4xl text-lg text-ink-muted md:text-xl">
-            Posts e artes pré-prontas no Canva — personalize e publique.
-            Disponíveis na Hotmart.
+          <p className="mt-4 max-w-3xl text-lg text-ink-muted md:text-xl">
+            Modelos prontos no Canva — personalize e adapte à sua identidade.
+            Disponível na Hotmart.
           </p>
         </Reveal>
 
         <Reveal className="mt-10">
-          <BentoGrid className="auto-rows-[11rem] grid-cols-1 gap-3 sm:grid-cols-2 md:auto-rows-[10.5rem] md:grid-cols-3 md:gap-4">
-            {TEMPLATES.map((t) => (
-              <a
-                key={t.id}
-                id={t.id}
-                href={t.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  'group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-ink/10 bg-surface shadow-sticker-sm outline-none transition hover:-translate-y-0.5 hover:shadow-sticker focus-visible:ring-2 focus-visible:ring-accent',
-                  t.className,
-                )}
-              >
+          <article
+            id="creative-pack"
+            className="scroll-mt-28 overflow-hidden rounded-[1.75rem] border border-ink/10 bg-surface shadow-sticker-sm"
+          >
+            <div className="grid md:grid-cols-[minmax(0,18rem)_1fr] lg:grid-cols-[minmax(0,22rem)_1fr]">
+              <div className="bg-charcoal">
                 <img
-                  src={t.image}
-                  alt={t.imageAlt}
-                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  src="/images/templates/creative-pack.jpg"
+                  alt="Creative Pack — templates para maquiagem e lash designer"
+                  className="h-auto w-full object-cover"
                   loading="lazy"
+                  width={1080}
+                  height={1350}
                 />
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-paper-deep from-15% via-paper-deep/75 via-50% to-paper-deep/10"
-                  aria-hidden
-                />
-                <div className="relative z-10 p-4 md:p-5">
-                  <h3 className="font-display text-xl md:text-2xl">
-                    {t.title}
-                  </h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-ink/80">
-                    {t.description}
-                  </p>
-                  <span className="mt-3 inline-flex text-sm font-semibold text-accent transition group-hover:text-blush">
+              </div>
+
+              <div className="flex flex-col justify-center p-6 md:p-10">
+                <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+                  Kit único · 28 templates
+                </p>
+                <h3 className="mt-3 font-display text-3xl md:text-4xl">
+                  Creative Pack
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink-muted md:text-lg">
+                  Templates para designers e social medias, nicho de maquiagem e
+                  lash designer. Modelos prontos para editar e personalizar —
+                  materiais para utilizar como inspiração e adaptar à sua
+                  identidade visual.
+                </p>
+                <div className="mt-8">
+                  <a
+                    href={LINKS.hotmart.creativePack}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-charcoal shadow-pop transition hover:bg-accent-hover"
+                  >
                     Comprar na Hotmart →
-                  </span>
+                  </a>
                 </div>
-              </a>
-            ))}
-          </BentoGrid>
+              </div>
+            </div>
+          </article>
         </Reveal>
       </div>
     </section>

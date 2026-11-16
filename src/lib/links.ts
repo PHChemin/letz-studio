@@ -20,9 +20,6 @@ export const LINKS = {
   pinterest: 'https://www.pinterest.com/letzstudio/',
   email: 'mailto:letzia.contato@outlook.com',
   hotmart: {
-    midiaKit: 'https://pay.hotmart.com/L104885715W?bid=1784577893356',
-    socialMedia: 'https://pay.hotmart.com/Q105387748P?bid=1784572943563',
-    lash: 'https://pay.hotmart.com/J104912151F?bid=1784577924794',
-    glam: 'https://pay.hotmart.com/R104912225A?bid=1784577938011',
+    creativePack: 'https://pay.hotmart.com/B108516633P',
   },
 } as const
